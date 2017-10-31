@@ -2,4 +2,4 @@
 
 HTML pages repository
 
-Hosted at <https://brian-hodges.github.io>
+Hosted at <https://b-hodges.github.io>

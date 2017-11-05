@@ -5,7 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Brian Hodges's Projects</title>
 
+    <!-- Bootstrap, JS at bottom -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- ReactJS -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <!-- My Scripts -->
+    <script type="text/babel" src="projects.js"></script>
+    <script type="text/babel">
+const projects = {
+    "This repo": [
+        "https://github.com/b-hodges/b-hodges.github.io",
+        "The repository for this web page."
+    ],
+    "Dice Bot": [
+        "https://github.com/b-hodges/dice-bot",
+        "A simple Discord bot made for D&amp;D to manage dice rolling."
+    ],
+    "ist-tutoring": [
+        "https://github.com/b-hodges/ist-tutoring",
+        "A web-based ticket system for the University of Nebraska at Omaha's Computer Science Learning Center to track student requests. Processes 20-50 student requests per day depending on when assignments are due."
+    ],
+    "ACMTalks": [
+        "https://github.com/b-hodges/ACMTalks",
+        "Slides and code from talks I've done at the University of Nebraska at Omaha's Association for Computing Machinery."
+    ],
+    "Menger": [
+        "https://github.com/b-hodges/Menger",
+        "Contains a set of Sierpinski Carpet generators that I've messed with, mostly in Python. The repository may have been misnamed."
+    ],
+};
+
+ReactDOM.render(
+    <ProjectList projects={projects} />,
+    document.getElementById("projects")
+);
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,35 +75,10 @@
     <div class="container">
         <h1>Projects</h1>
         <p>This is not intended as a comprehensive list of the projects I've worked on, but includes most of what I have stored in GitHub.</p>
-        <ul class="list-group">
-            <li class="list-group-item flex-column align-items-start">
-                <h2><a href="https://github.com/b-hodges/b-hodges.github.io">This repo</a></h2>
-                <p>The repository for this web page.</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <h2><a href="https://github.com/b-hodges/dice-bot">Dice Bot</a></h2>
-                <p>A simple Discord bot made for D&amp;D to manage dice rolling.</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <h2><a href="https://github.com/b-hodges/ist-tutoring">ist-tutoring</a></h2>
-                <p>A web-based ticket system for the University of Nebraska at Omaha's Computer Science Learning Center to track student requests. Processes 20-50 student requests per day depending on when assignments are due.</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <h2><a href="https://github.com/b-hodges/ACMTalks">ACMTalks</a></h2>
-                <p>Slides and code from talks I've done at the University of Nebraska at Omaha's Association for Computing Machinery.</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <h2><a href="https://github.com/b-hodges/Menger">Menger</a></h2>
-                <p>Contains a set of Sierpinski Carpet generators that I've messed with, mostly in Python. The repository may have been misnamed.</p>
-            </li>
-            <!--<li class="list-group-item flex-column align-items-start">
-                <h2><a href=""></a></h2>
-                <p></p>
-            </li>-->
-        </ul>
+        <div id="projects"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>

@@ -2,7 +2,7 @@ class Project extends React.Component {
     render() {
         return (
             <li className="list-group-item flex-column align-items-start">
-                <h2><a href="{this.props.href}">{this.props.name}</a></h2>
+                <h2><a href={this.props.href}>{this.props.name}</a></h2>
                 <p>{this.props.description}</p>
             </li>
         );

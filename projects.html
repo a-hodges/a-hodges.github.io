@@ -18,7 +18,7 @@
 
     <!-- My Scripts -->
     <script type="text/babel" src="projects.js"></script>
-    <script type="text/babel">
+    <script>
 const projects = {
     "This repo": [
         "https://github.com/b-hodges/b-hodges.github.io",
@@ -30,7 +30,9 @@ const projects = {
     ],
     "Dice Bot": [
         "https://github.com/b-hodges/dice-bot",
-        "A simple Discord bot made for D&D to manage dice rolling."
+        "A simple Discord bot made for D&D to manage dice rolling.",
+        "The code for the web interface can be found here: https://github.com/b-hodges/dice-bot-web",
+        "And the fint-end itself can be found at https://dice-bot.com"
     ],
     "ist-tutoring": [
         "https://github.com/b-hodges/ist-tutoring",
@@ -45,7 +47,8 @@ const projects = {
         "Contains a set of Sierpinski Carpet generators that I've messed with, mostly in Python. The name is slightly misleading since there's only 1 script capable of generating menger sponges in it."
     ],
 };
-
+    </script>
+    <script type="text/babel">
 ReactDOM.render(
     <ProjectList projects={projects} />,
     document.getElementById("projects")
